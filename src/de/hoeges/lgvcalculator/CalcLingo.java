@@ -20,6 +20,7 @@ public class CalcLingo {
 		
 	}
 
+	
 	public String[] getLingo(String cLingo){
 		
 		if (cLingo.equals("DE")) { 
