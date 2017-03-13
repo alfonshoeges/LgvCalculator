@@ -20,32 +20,57 @@ import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CopyToClipBoard.
+ */
 public class CopyToClipBoard implements ClipboardOwner{
 
-	  public void lostOwnership( Clipboard aClipboard, Transferable aContents) {
+	  /* (nicht-Javadoc)
+  	 * @see java.awt.datatransfer.ClipboardOwner#lostOwnership(java.awt.datatransfer.Clipboard, java.awt.datatransfer.Transferable)
+  	 */
+  	public void lostOwnership( Clipboard aClipboard, Transferable aContents) {
 		     
 		   }
 	
-	  public CopyToClipBoard() {
+	  /**
+  	 * Instantiates a new copy to clip board.
+  	 */
+  	public CopyToClipBoard() {
 		super();
 	  }
 	
 	  
-	  public void setCopy(String enter){
+	  /**
+  	 * Sets the copy.
+  	 *
+  	 * @param enter the new copy
+  	 */
+  	public void setCopy(String enter){
 		
 		  CopyToClipBoard copyToClipBoard = new CopyToClipBoard();
 		  copyToClipBoard.setClipboardContents(enter);
 		
 	  }
 	
-	  //Transfer to Clipboard (copies)
+	  /**
+  	 * Sets the clipboard contents.
+  	 *
+  	 * @param aString the new clipboard contents
+  	 */
+  	//Transfer to Clipboard (copies)
 	  public void setClipboardContents( String aString ){
 		    StringSelection stringSelection = new StringSelection( aString );
 		    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		    clipboard.setContents( stringSelection, this );
 	  }
 	
-	  //Transfer from Clipboard (paste)
+	  /**
+  	 * Gets the clipboard contents.
+  	 *
+  	 * @return the clipboard contents
+  	 */
+  	//Transfer from Clipboard (paste)
 	  public String getClipboardContents() {
 		    String result = "";
 		    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();

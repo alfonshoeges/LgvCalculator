@@ -10,9 +10,21 @@
 
 package de.hoeges.lgvcalculator;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CalcLingo.
+ *
+ * @author Hoeges
+ */
+
 public class CalcLingo {
+	
+	/** The lingo. */
 	String[] lingo = new String[30];
 	
+	/**
+	 * Instantiates a new calc lingo.
+	 */
 	public CalcLingo() {
 		for (int i=0;i < lingo.length;++i){
 			lingo[i] = null;
@@ -21,6 +33,12 @@ public class CalcLingo {
 	}
 
 	
+	/**
+	 * Gets the lingo.
+	 *
+	 * @param cLingo the c lingo
+	 * @return the lingo
+	 */
 	public String[] getLingo(String cLingo){
 		
 		if (cLingo.equals("DE")) { 

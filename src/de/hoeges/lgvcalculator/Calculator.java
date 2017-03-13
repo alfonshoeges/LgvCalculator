@@ -26,9 +26,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.Runnable;
-import java.lang.Math;
-
 
 import javax.imageio.ImageIO;
 import javax.swing.Box;
@@ -50,90 +47,219 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
 
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Calculator.
+ *
+ * @author Hoeges
+ */
+
 @SuppressWarnings("serial")
 public class Calculator extends JFrame {
 
+	/** The cal. */
 	//frame
 	private static Calculator cal;	// new Calculator("Calculator");
+	
+	/** The bevn. */
 	private static ButtonEvents bevn = new ButtonEvents();
 
+	/** The m program. */
 	//member
 	private static String mProgram;
+	
+	/** The m exit. */
 	private static String mExit;
+	
+	/** The m languages. */
 	private static String mLanguages;
+	
+	/** The m german. */
 	private static String mGerman;
+	
+	/** The m english. */
 	private static String mEnglish;
+	
+	/** The m french. */
 	private static String mFrench;
+	
+	/** The m finnish. */
 	private static String mFinnish;
+	
+	/** The m danish. */
 	private static String mDanish;
+	
+	/** The m dutch. */
 	private static String mDutch;
+	
+	/** The m croatian. */
 	private static String mCroatian;
+	
+	/** The m spanish. */
 	private static String mSpanish;
+	
+	/** The m italian. */
 	private static String mItalian;
+	
+	/** The m hungarian. */
 	private static String mHungarian;
+	
+	/** The m info. */
 	private static String mInfo;
+	
+	/** The m information. */
 	private static String mInformation;
+	
+	/** The b copy T. */
 	private static String bCopyT;
+	
+	/** The b paste T. */
 	private static String bPasteT;
+	
+	/** The l mem. */
 	private static String lMem;
+	
+	/** The m lingo. */
 	private static String[] mLingo = new String[30];
+	
+	/** The m LG. */
 	private static String mLG;
+	
+	/** The in 1. */
 	private static String in1;
+	
+	/** The in 2. */
 	private static String in2;
+	
+	/** The in 3. */
 	private static String in3;
+	
+	/** The in 4. */
 	private static String in4;
+	
+	/** The in 5. */
 	private static String in5;
+	
+	/** The in 6. */
 	private static String in6;
+	
+	/** The name. */
 	private static String fName = "calLG.GID";
+	
+	/** The err 1. */
 	private static String err1;
+	
+	/** The err 2. */
 	private static String err2;
 	
+/** The km. */
 //	computing	
 	private static boolean km = false;
+	
+	/** The inp. */
 	private static boolean inp = true;
+	
+	/** The number 1 set. */
 	private static boolean number1_set = false;
+	
+	/** The number 2 set. */
 	private static boolean number2_set = false;
+	
+	/** The err set. */
 	private static boolean err_set = false;
+	
+	/** The n 3. */
 	private static boolean n3 = false;
 	
+	/** The n M 4. */
 	private static double nM1,nM2,nM3,nM4;
+	
+	/** The op. */
 	private static char op;
+	
+	/** The res. */
 	private static double res = 0.0;
 	
+/** The enter. */
 //	components	
 	private static JTextField enter;
+	
+	/** The m. */
 	private static JLabel m;
+	
+	/** The memory. */
 	private static JTextField memory;
+	
+	/** The copy. */
 	private static JButton copy;
+	
+	/** The paste. */
 	private static JButton paste;
 	
+	/** The menu 1. */
 	private static JMenu menu1;
+	
+	/** The item 11. */
 	private static JMenuItem item11;
 	
+	/** The menu 2. */
 	private static JMenu menu2;
+	
+	/** The item 21. */
 	private static JMenuItem item21;
+	
+	/** The item 22. */
 	private static JMenuItem item22;	
+	
+	/** The item 23. */
 	private static JMenuItem item23;
+	
+	/** The item 24. */
 	private static JMenuItem item24;
+	
+	/** The item 25. */
 	private static JMenuItem item25;	
+	
+	/** The item 26. */
 	private static JMenuItem item26;	
+	
+	/** The item 27. */
 	private static JMenuItem item27;	
+	
+	/** The item 28. */
 	private static JMenuItem item28;	
+	
+	/** The item 29. */
 	private static JMenuItem item29;	
+	
+	/** The item 30. */
 	private static JMenuItem item30;	
 
+	/** The menu 3. */
 	private static JMenu menu3;
+	
+	/** The item 31. */
 	private static JMenuItem item31;
 	
 	
+	/** The os. */
 	private static String os;
+	
+	/** The base dir. */
 	private static String baseDir;
+	
+	/** The base data. */
 	private static String baseData;
+	
+	/** The file sep. */
 	private static String fileSep;
 	
 	
+	/** The os base. */
 	private String osBase;
 	
+	/** The progname. */
 	//==================================================
 	private final String PROGNAME = "Calculator.jar"; 
 	//==================================================
@@ -141,7 +267,12 @@ public class Calculator extends JFrame {
 	
 	
 //=============================================================	
-//	Constructor	
+/**
+	 * Instantiates a new calculator.
+	 *
+	 * @param titel the titel
+	 */
+	//	Constructor	
 	public Calculator(String titel) {
 		super(titel);
 
@@ -167,6 +298,9 @@ public class Calculator extends JFrame {
 		
 //==============================================================		
 //	GUI
+/**
+ * Creates the and show calc.
+ */
 //--------------------------------------------------------------
 	private static void createAndShowCalc() {
 	        //Create and set up the window.
@@ -907,17 +1041,30 @@ public class Calculator extends JFrame {
 //	methods
 	
 
-	public void setEnter(String cEnter){
+	/**
+ * Sets the enter.
+ *
+ * @param cEnter the new enter
+ */
+public void setEnter(String cEnter){
 		StringToNumber strn = new StringToNumber();
 		enter.setText(Double.toString(strn.strToDbl(cEnter)));
 	}
 
+	/**
+	 * Gets the enter.
+	 *
+	 * @return the enter
+	 */
 	public String getEnter(){
 		String cEnter = enter.getText();
 		return cEnter;
 	
 	}
 	
+			/**
+			 * Exit program.
+			 */
 			//Programm beenden , exit program
 	public void exitProgram(){
 				setVisible(false);
@@ -926,12 +1073,18 @@ public class Calculator extends JFrame {
 	}
 
 			//Sprachen, languages
+			/**
+			 * Lang DE.
+			 */
 			//Deutsch , German
 	public void langDE(){
 				setLanguages("DE");
 				writeLg(fName, "DE");
 	}
 			
+			/**
+			 * Lang EN.
+			 */
 			//Englisch, English
 	public void langEN(){
 				setLanguages("EN");
@@ -939,6 +1092,9 @@ public class Calculator extends JFrame {
 				
 	}			
 	
+			/**
+			 * Lang FR.
+			 */
 			//Französisch, French
 	public void langFR(){			
 				setLanguages("FR");
@@ -946,6 +1102,9 @@ public class Calculator extends JFrame {
 				
 	}			
 	
+			/**
+			 * Lang FI.
+			 */
 			//Finnisch, Finnish
 	public void langFI(){			
 				setLanguages("FI");
@@ -954,6 +1113,9 @@ public class Calculator extends JFrame {
 	}			
 	
 	
+			/**
+			 * Lang DA.
+			 */
 			//Dänisch, Danish
 	public void langDA(){			
 			setLanguages("DA");
@@ -961,6 +1123,9 @@ public class Calculator extends JFrame {
 		
 	}			
 	
+			/**
+			 * Lang NL.
+			 */
 			//Niederländisch, Dutch
 	public void langNL(){			
 			setLanguages("NL");
@@ -968,6 +1133,9 @@ public class Calculator extends JFrame {
 		
 	}			
 	
+			/**
+			 * Lang HR.
+			 */
 			//Kroatisch, Kroatish
 	public void langHR(){			
 			setLanguages("HR");
@@ -975,18 +1143,27 @@ public class Calculator extends JFrame {
 		
 	}			
 			
+			/**
+			 * Lang ES.
+			 */
 			//Spanisch, Spanish
 	public void langES(){	
 				setLanguages("ES");
 				writeLg(fName, "ES");
 	}			
 			
+			/**
+			 * Lang IT.
+			 */
 			//Italienisch, Italian
 	public void langIT(){	
 				setLanguages("IT");
 				writeLg(fName, "IT");
 	}			
 		
+	/**
+	 * Lang HU.
+	 */
 	//Italienisch, Italian
 	public void langHU(){	
 				setLanguages("HU");
@@ -996,13 +1173,19 @@ public class Calculator extends JFrame {
 		
 //.........................................................		
 
-			//	 clear enter
+			/**
+ * Clear enter.
+ */
+//	 clear enter
 	public void clearEnter(){
 				enter.setText("");
 				km = false;
 	}
 			
 
+				/**
+				 * Clear complete.
+				 */
 				// clear complete
 	public void clearComplete(){
 				enter.setForeground(Color.BLACK);
@@ -1022,6 +1205,11 @@ public class Calculator extends JFrame {
 
 	}
 
+	/**
+	 * Sets the number.
+	 *
+	 * @param number the new number
+	 */
 	public void setNumber(String number){
 			
 				if (!n3) enter.setText("");
@@ -1036,6 +1224,11 @@ public class Calculator extends JFrame {
 				// division, reziprog, multiplication
 				// potency square, subtraction, sqrt, square-be rooted
 				// addition, reziprog, X^y, y sqrt X, cos, sin, 
+				/**
+				 * Sets the operator.
+				 *
+				 * @param op the new operator
+				 */
 				// tan, cot, %
 	public void setOperator(char op){
 				n3 = false;
@@ -1045,12 +1238,20 @@ public class Calculator extends JFrame {
 	
 				// 	M diplay to memory, M diplay to memory plus
 				//	M diplay to memory subtraction
+				/**
+				 * Sets the mem.
+				 *
+				 * @param op the new mem
+				 */
 				//	 MR memory to display, memory clear
 	public void setMem(char op){
 				computingM(op);
 	}
 
 
+	/**
+	 * Sets the kom.
+	 */
 	public void setKom(){
 				if (!n3) enter.setText("");
 				if (!km){
@@ -1060,6 +1261,9 @@ public class Calculator extends JFrame {
 				km = true;
 	}
 			
+	/**
+	 * Sets the gl.
+	 */
 	public void setGl(){
 			
 				// = result
@@ -1071,6 +1275,11 @@ public class Calculator extends JFrame {
 	}
 	
 
+/**
+ * Sets the languages.
+ *
+ * @param lingo the new languages
+ */
 //---------------------------------------------------------------------
 	public static void setLanguages(String lingo){
 		
@@ -1144,6 +1353,12 @@ public class Calculator extends JFrame {
 
 
 	}
+
+/**
+ * Start languages.
+ *
+ * @param lingo the lingo
+ */
 //	---------------------------------------------------------------------
 	public static void startLanguages(String lingo){
 		
@@ -1181,6 +1396,13 @@ public class Calculator extends JFrame {
 
 		
 	}
+
+/**
+ * Read lg.
+ *
+ * @param fName the f name
+ * @return the string
+ */
 //	---------------------------------------------------------------------	
 	public static String readLg(String fName){
 		String gText = "";
@@ -1216,6 +1438,12 @@ public class Calculator extends JFrame {
 		
 	}
 
+/**
+ * Write lg.
+ *
+ * @param fName the f name
+ * @param cLg the c lg
+ */
 //	---------------------------------------------------------------------		
 	public void writeLg(String fName, String cLg){
 		File datei = new File(baseData + fName);
@@ -1230,6 +1458,9 @@ public class Calculator extends JFrame {
 	}
 	
 
+/**
+ * Information.
+ */
 //	---------------------------------------------------------------------	
 	public void information(){
 		
@@ -1250,6 +1481,11 @@ public class Calculator extends JFrame {
 	
 //=================================================================
 //		Calculate
+/**
+ * Sets the display.
+ *
+ * @param bt the new display
+ */
 //	-----------------------------------------------------------------
 	public void setDisplay(String bt){
 		if (!err_set){
@@ -1258,6 +1494,12 @@ public class Calculator extends JFrame {
 			enter.setText(tempStr+bt);
 		}	
 	}
+
+/**
+ * Sets the comp.
+ *
+ * @param opr the new comp
+ */
 //	-----------------------------------------------------------------	
 	public void setComp(char opr){
 		if (!enter.getText().equals("")) {
@@ -1315,6 +1557,10 @@ public class Calculator extends JFrame {
 		}
 		
 	}
+
+/**
+ * Computing.
+ */
 //----------------------------------------------------------------------	
 	public void computing(){
 		
@@ -1635,12 +1881,21 @@ public class Calculator extends JFrame {
 
 	}
 	
+/**
+ * Sets the pi.
+ */
 //	----------------------------------------------------------------------	
 	public void setPi(){
 		if (!err_set){
 			enter.setText(Double.toString(Math.PI));
 		}		
 	}
+
+/**
+ * Computing M.
+ *
+ * @param opr the opr
+ */
 //	----------------------------------------------------------------------	
 	public void computingM(char opr){
 		if (!err_set){
@@ -1719,6 +1974,12 @@ public class Calculator extends JFrame {
 		}
 		}
 	}
+
+/**
+ * Sets the err.
+ *
+ * @param nErr the new err
+ */
 //	-----------------------------------------------------------------	
 	public void setErr(int nErr){
 		
@@ -1755,12 +2016,18 @@ public class Calculator extends JFrame {
 	
 //=================================================================
 //		main	
+/**
+ * The main method.
+ *
+ * @param args the arguments
+ */
 //-----------------------------------------------------------------	
 	public static void main(String[] args) {
 	    //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
 
+			@Override
 			public void run() {
  
         		mLG = readLg(fName);

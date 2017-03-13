@@ -19,15 +19,25 @@ import javax.swing.JButton;
 import javax.swing.JMenuItem;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ButtonEvents.
+ */
 public class ButtonEvents implements ActionListener{
 
 
 
+	/** The cal. */
 	private static Calculator cal = new Calculator("Calculator");
+	
+	/** The copy to clip board. */
 	private static CopyToClipBoard copyToClipBoard;
 	
 	
 
+	/* (nicht-Javadoc)
+	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() instanceof JMenuItem){

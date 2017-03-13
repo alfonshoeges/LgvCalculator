@@ -11,16 +11,32 @@
 package de.hoeges.lgvcalculator;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StringToNumber.
+ */
 public class StringToNumber {
 
+	/** The n str dbl. */
 	private double nStrDbl = 0;
+	
+	/** The n str int. */
 	private int nStrInt = 0;
 
 	
+	/**
+	 * Instantiates a new string to number.
+	 */
 	public StringToNumber (){
 		super();
 	}
 	
+	/**
+	 * Str to dbl.
+	 *
+	 * @param cStr the c str
+	 * @return the double
+	 */
 	public double strToDbl (String cStr){
 
 		nStrDbl = Double.valueOf(checkStr(cStr,'d')).doubleValue();
@@ -28,6 +44,12 @@ public class StringToNumber {
 		
 	}
 	
+	/**
+	 * Str to int.
+	 *
+	 * @param cStr the c str
+	 * @return the int
+	 */
 	public int strToInt (String cStr){
 	
 		//nStrInt = Integer.parseInt(checkStr(cStr));
@@ -37,6 +59,13 @@ public class StringToNumber {
 	}
 	
 	
+	/**
+	 * Check str.
+	 *
+	 * @param enterCHK the enter CHK
+	 * @param c the c
+	 * @return the string
+	 */
 	private String checkStr(String enterCHK, char c){
 		String tempStr = null;
 		if (c == 'd') tempStr = enterCHK.replace(',', '.');
