@@ -20,14 +20,15 @@ import javax.swing.JMenuItem;
 
 
 public class ButtonEvents implements ActionListener{
-	
-	
+
+
 
 	private static Calculator cal = new Calculator("Calculator");
 	private static CopyToClipBoard copyToClipBoard;
 	
 	
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() instanceof JMenuItem){
 			
