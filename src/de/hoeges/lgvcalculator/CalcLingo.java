@@ -22,7 +22,6 @@ public class CalcLingo {
 
 	public String[] getLingo(String cLingo){
 		
-		
 		if (cLingo.equals("DE")) { 
 			//mProgram,mExit,mLanguages,mGerman,
 			//mEnglish,mFrench,mSpanish,mInfo,mInformation;
